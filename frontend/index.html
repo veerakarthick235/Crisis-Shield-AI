@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CrisisShield AI — Autonomous Multi-Agent Disaster Detection & Response Coordination Dashboard">
+    <title>CrisisShield AI — Disaster Intelligence Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-brand">
+            <div class="brand-icon">🛡️</div>
+            <div class="brand-text">
+                <h1>CrisisShield <span class="brand-accent">AI</span></h1>
+                <p class="brand-subtitle">Autonomous Disaster Intelligence</p>
+            </div>
+        </div>
+        <div class="nav-status">
+            <div class="system-status" id="systemStatus">
+                <span class="status-dot pulse"></span>
+                <span class="status-text">System Active</span>
+            </div>
+            <div class="nav-clock" id="navClock"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Stats Bar -->
+    <section class="hero-stats" id="heroStats">
+        <div class="stat-card">
+            <div class="stat-icon signal-icon">📡</div>
+            <div class="stat-info">
+                <span class="stat-value" id="statSignals">0</span>
+                <span class="stat-label">Active Signals</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon alert-icon">⚠️</div>
+            <div class="stat-info">
+                <span class="stat-value" id="statAlerts">0</span>
+                <span class="stat-label">Active Alerts</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon risk-icon">🎯</div>
+            <div class="stat-info">
+                <span class="stat-value" id="statRiskZones">0</span>
+                <span class="stat-label">Regions at Risk</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon rescue-icon">🚑</div>
+            <div class="stat-info">
+                <span class="stat-value" id="statRescue">0</span>
+                <span class="stat-label">Units Deployed</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon people-icon">👥</div>
+            <div class="stat-info">
+                <span class="stat-value" id="statPeople">0</span>
+                <span class="stat-label">People Notified</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon agent-icon">🤖</div>
+            <div class="stat-info">
+                <span class="stat-value" id="statAgents">0</span>
+                <span class="stat-label">Agents Active</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Dashboard Grid -->
+    <main class="dashboard-grid">
+
+        <!-- Agent Status Panel -->
+        <section class="panel agent-panel" id="agentPanel">
+            <div class="panel-header">
+                <h2>🤖 Agent Network</h2>
+                <span class="panel-badge" id="agentBadge">5 Agents</span>
+            </div>
+            <div class="agent-cards" id="agentCards">
+                <div class="agent-card" data-agent="SignalWatch">
+                    <div class="agent-indicator idle"></div>
+                    <div class="agent-info">
+                        <h3>📡 SignalWatch</h3>
+                        <p class="agent-action">Initializing...</p>
+                        <div class="agent-meta">
+                            <span class="agent-msgs">0 msgs</span>
+                            <span class="agent-uptime">0s</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="agent-card" data-agent="RiskPredict">
+                    <div class="agent-indicator idle"></div>
+                    <div class="agent-info">
+                        <h3>🎯 RiskPredict</h3>
+                        <p class="agent-action">Initializing...</p>
+                        <div class="agent-meta">
+                            <span class="agent-msgs">0 msgs</span>
+                            <span class="agent-uptime">0s</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="agent-card" data-agent="CitizenAlert">
+                    <div class="agent-indicator idle"></div>
+                    <div class="agent-info">
+                        <h3>📢 CitizenAlert</h3>
+                        <p class="agent-action">Initializing...</p>
+                        <div class="agent-meta">
+                            <span class="agent-msgs">0 msgs</span>
+                            <span class="agent-uptime">0s</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="agent-card" data-agent="RescueCoordinator">
+                    <div class="agent-indicator idle"></div>
+                    <div class="agent-info">
+                        <h3>🚑 RescueCoordinator</h3>
+                        <p class="agent-action">Initializing...</p>
+                        <div class="agent-meta">
+                            <span class="agent-msgs">0 msgs</span>
+                            <span class="agent-uptime">0s</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="agent-card" data-agent="ResourceSupply">
+                    <div class="agent-indicator idle"></div>
+                    <div class="agent-info">
+                        <h3>📦 ResourceSupply</h3>
+                        <p class="agent-action">Initializing...</p>
+                        <div class="agent-meta">
+                            <span class="agent-msgs">0 msgs</span>
+                            <span class="agent-uptime">0s</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Risk Zones Panel -->
+        <section class="panel risk-panel" id="riskPanel">
+            <div class="panel-header">
+                <h2>🗺️ Risk Zone Map</h2>
+                <span class="panel-badge" id="riskBadge">0 Zones</span>
+            </div>
+            <div class="risk-grid" id="riskGrid">
+                <div class="risk-placeholder">
+                    <div class="placeholder-icon">🌐</div>
+                    <p>Awaiting risk assessment data...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alert Feed Panel -->
+        <section class="panel alert-panel" id="alertPanel">
+            <div class="panel-header">
+                <h2>🔔 Live Alert Feed</h2>
+                <span class="panel-badge alert-badge" id="alertBadge">0 Active</span>
+            </div>
+            <div class="alert-feed" id="alertFeed">
+                <div class="alert-placeholder">
+                    <div class="placeholder-icon">🔕</div>
+                    <p>No active alerts — system monitoring</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rescue Deployment Panel -->
+        <section class="panel rescue-panel" id="rescuePanel">
+            <div class="panel-header">
+                <h2>🚨 Rescue Deployment</h2>
+                <span class="panel-badge" id="rescueBadge">0 Active</span>
+            </div>
+            <div class="rescue-summary" id="rescueSummary">
+                <div class="rescue-type">
+                    <span class="rescue-icon">🚑</span>
+                    <span class="rescue-label">Ambulances</span>
+                    <span class="rescue-count" id="rescueAmbulances">0 / 24</span>
+                    <div class="rescue-bar"><div class="rescue-fill" id="rescueAmbBar" style="width: 0%"></div></div>
+                </div>
+                <div class="rescue-type">
+                    <span class="rescue-icon">🚤</span>
+                    <span class="rescue-label">Rescue Boats</span>
+                    <span class="rescue-count" id="rescueBoats">0 / 16</span>
+                    <div class="rescue-bar"><div class="rescue-fill" id="rescueBoatBar" style="width: 0%"></div></div>
+                </div>
+                <div class="rescue-type">
+                    <span class="rescue-icon">👷</span>
+                    <span class="rescue-label">Relief Teams</span>
+                    <span class="rescue-count" id="rescueTeams">0 / 40</span>
+                    <div class="rescue-bar"><div class="rescue-fill" id="rescueTeamBar" style="width: 0%"></div></div>
+                </div>
+            </div>
+            <div class="rescue-units-list" id="rescueUnitsList"></div>
+        </section>
+
+        <!-- Resource Tracking Panel -->
+        <section class="panel resource-panel" id="resourcePanel">
+            <div class="panel-header">
+                <h2>📦 Resource Inventory</h2>
+                <span class="panel-badge" id="resourceBadge">Central HQ</span>
+            </div>
+            <div class="resource-grid" id="resourceGrid">
+                <div class="resource-item">
+                    <div class="resource-icon">🍞</div>
+                    <div class="resource-info">
+                        <span class="resource-name">Food Packets</span>
+                        <span class="resource-value" id="resFood">50,000</span>
+                    </div>
+                    <div class="resource-bar"><div class="resource-fill" id="resFoodBar" style="width: 100%"></div></div>
+                </div>
+                <div class="resource-item">
+                    <div class="resource-icon">🏥</div>
+                    <div class="resource-info">
+                        <span class="resource-name">Medical Kits</span>
+                        <span class="resource-value" id="resMedical">8,000</span>
+                    </div>
+                    <div class="resource-bar"><div class="resource-fill" id="resMedBar" style="width: 100%"></div></div>
+                </div>
+                <div class="resource-item">
+                    <div class="resource-icon">💧</div>
+                    <div class="resource-info">
+                        <span class="resource-name">Water (Liters)</span>
+                        <span class="resource-value" id="resWater">100,000</span>
+                    </div>
+                    <div class="resource-bar"><div class="resource-fill" id="resWaterBar" style="width: 100%"></div></div>
+                </div>
+                <div class="resource-item">
+                    <div class="resource-icon">🏕️</div>
+                    <div class="resource-info">
+                        <span class="resource-name">Shelter Capacity</span>
+                        <span class="resource-value" id="resShelter">15,000</span>
+                    </div>
+                    <div class="resource-bar"><div class="resource-fill" id="resShelterBar" style="width: 100%"></div></div>
+                </div>
+            </div>
+            <div class="allocation-log" id="allocationLog">
+                <h3>Recent Allocations</h3>
+                <div class="allocation-list" id="allocationList"></div>
+            </div>
+        </section>
+
+        <!-- Signal Trend Panel -->
+        <section class="panel trend-panel" id="trendPanel">
+            <div class="panel-header">
+                <h2>📊 Signal Trends</h2>
+                <span class="panel-badge">Real-time</span>
+            </div>
+            <div class="trend-chart-container">
+                <canvas id="signalChart" width="600" height="200"></canvas>
+            </div>
+            <div class="signal-list" id="signalList"></div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+        <p>CrisisShield AI v1.0 — Powered by Fetch.ai uAgents Framework</p>
+        <p class="footer-tech">FastAPI • Multi-Agent System • Real-time Dashboard</p>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/charts.js"></script>
+    <script src="/js/dashboard.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>
