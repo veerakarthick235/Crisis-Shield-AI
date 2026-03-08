@@ -159,14 +159,6 @@ API documentation:
 
 ------------------------------------------------------------------------
 
-## 🎥 Demo Video
-
-Add your project demo video here:
-
-    https://youtube.com/your-demo-link
-
-------------------------------------------------------------------------
-
 ## 🚀 Future Improvements
 
 -   Integration with real satellite and weather data
