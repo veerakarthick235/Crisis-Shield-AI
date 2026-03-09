@@ -117,14 +117,16 @@ The CrisisShield AI dashboard provides:
 
 # 🧰 Tech Stack
 
-  Layer             Technology
-  ----------------- ---------------------------------
-  Backend           Python, FastAPI
-  AI Platform       ASI:One Intelligent AI Platform
-  Agent Framework   Fetch.ai uAgents
-  Frontend          HTML5, CSS3, JavaScript
-  Data              Simulated Environmental Sources
-  API Docs          OpenAPI / Swagger
+## 🧰 Tech Stack
+
+| Layer | Technology |
+|------|-------------|
+| Backend | Python, FastAPI |
+| AI Platform | ASI:One Intelligent AI Platform |
+| Agent Framework | Fetch.ai uAgents |
+| Frontend | HTML5, CSS3, JavaScript |
+| Data | Simulated Environmental Sources |
+| API Docs | OpenAPI / Swagger |
 
 ------------------------------------------------------------------------
 
