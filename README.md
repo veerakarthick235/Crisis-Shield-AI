@@ -117,8 +117,6 @@ The CrisisShield AI dashboard provides:
 
 # 🧰 Tech Stack
 
-## 🧰 Tech Stack
-
 | Layer | Technology |
 |------|-------------|
 | Backend | Python, FastAPI |
@@ -133,22 +131,22 @@ The CrisisShield AI dashboard provides:
 # 📂 Project Structure
 
 crisis-shield-ai/
-
-backend/\
-agents/\
-signal_watch_agent.py\
-risk_predict_agent.py\
-citizen_alert_agent.py\
-rescue_coordinator_agent.py\
-resource_supply_agent.py
-
-frontend/\
-css/\
-js/\
-index.html
-
-docs/\
-PROJECT_DOCUMENT.md
+│
+├── backend/
+│   ├── agents/
+│   │   ├── signal_watch_agent.py
+│   │   ├── risk_predict_agent.py
+│   │   ├── citizen_alert_agent.py
+│   │   ├── rescue_coordinator_agent.py
+│   │   └── resource_supply_agent.py
+│
+├── frontend/
+│   ├── css/
+│   ├── js/
+│   └── index.html
+│
+└── docs/
+    └── PROJECT_DOCUMENT.md
 
 ------------------------------------------------------------------------
 
