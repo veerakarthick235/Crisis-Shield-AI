@@ -1,13 +1,13 @@
 # 🛡️ CrisisShield AI
 
-**Autonomous Multi-Agent Disaster Detection & Response Coordination
-System**
+### Autonomous Multi-Agent Disaster Detection & Response System
 
 CrisisShield AI is an intelligent disaster monitoring and response
-coordination platform powered by autonomous AI agents. The system
-continuously analyzes environmental signals, predicts risk zones, alerts
-citizens, and coordinates emergency resources --- enabling faster
-disaster response and potentially saving lives.
+coordination platform powered by **autonomous AI agents and the ASI:One
+intelligent AI platform**.\
+The system continuously analyzes environmental signals, predicts risk
+zones, alerts citizens, and coordinates emergency resources --- enabling
+faster disaster response and potentially saving lives.
 
 ------------------------------------------------------------------------
 
@@ -16,10 +16,10 @@ disaster response and potentially saving lives.
 Natural disasters such as floods, earthquakes, and wildfires often cause
 preventable damage because:
 
--   Early warning signals are fragmented across different systems
--   Emergency response coordination is slow and manual
--   Authorities lack real‑time situational intelligence
--   Citizens receive alerts too late
+• Early warning signals are fragmented across systems\
+• Emergency response coordination is slow and manual\
+• Authorities lack real-time situational intelligence\
+• Citizens receive alerts too late
 
 A unified intelligence system capable of detecting early signals and
 coordinating response actions is critical.
@@ -31,110 +31,126 @@ coordinating response actions is critical.
 CrisisShield AI introduces a **multi-agent AI architecture** where
 autonomous agents collaborate to:
 
-1.  Monitor environmental signals
-2.  Detect potential disaster indicators
-3.  Predict high‑risk regions
-4.  Alert citizens and authorities
+1.  Monitor environmental signals\
+2.  Detect potential disaster indicators\
+3.  Predict high‑risk regions\
+4.  Alert citizens and authorities\
 5.  Coordinate rescue resources and emergency supplies
 
-This agent-based architecture allows the system to operate
-**autonomously, continuously, and at scale**.
+This architecture allows the system to operate:
+
+✔ Continuously\
+✔ Autonomously\
+✔ At scale
 
 ------------------------------------------------------------------------
 
-## 🧠 Autonomous Agents
+# 🤖 Autonomous Agents
 
-### SignalWatch Agent
+### 📡 SignalWatch Agent
 
 Monitors environmental signals such as rainfall, seismic activity, and
 weather patterns to detect early disaster indicators.
 
-### RiskPredict Agent
+### 🎯 RiskPredict Agent
 
-Analyzes signals and predicts potential disaster zones using historical
-and environmental data.
+Analyzes signals and predicts potential disaster zones using
+environmental and historical data.
 
-### CitizenAlert Agent
+### 📢 CitizenAlert Agent
 
 Automatically generates alerts and distributes them to citizens and
 emergency authorities.
 
-### RescueCoordinator Agent
+### 🚑 RescueCoordinator Agent
 
 Allocates rescue teams, emergency vehicles, and response units to
 high‑risk areas.
 
-### ResourceSupply Agent
+### 📦 ResourceSupply Agent
 
-Tracks emergency resources such as medical kits, food supplies, and
+Tracks emergency resources including food supplies, medical kits, and
 shelter capacity.
 
 ------------------------------------------------------------------------
 
-## 🏗️ System Architecture
+# 🤖 ASI:One AI Integration
 
-    SignalWatch Agent → RiskPredict Agent → CitizenAlert Agent
-                                          → RescueCoordinator Agent
-                                          → ResourceSupply Agent
+CrisisShield AI integrates the **ASI:One Intelligent AI Platform** to
+enhance disaster analysis and decision support.
 
-All agents operate concurrently and communicate through a shared event
-bus.
+ASI:One enables the system to:
+
+• Analyze disaster signals in real time\
+• Generate intelligent emergency recommendations\
+• Assist autonomous agents with decision-making\
+• Provide contextual reasoning for disaster response actions
+
+The **RiskPredict Agent** uses the ASI:One API to evaluate environmental
+signals and determine potential disaster risk levels.
 
 ------------------------------------------------------------------------
 
-## 🖥️ Dashboard Features
+# 🏗️ System Architecture
+
+SignalWatch Agent → RiskPredict Agent → CitizenAlert Agent\
+↙ ↘\
+RescueCoordinator ResourceSupply
+
+All agents communicate through a shared event system and operate
+concurrently.
+
+------------------------------------------------------------------------
+
+# 🖥️ Dashboard Features
 
 The CrisisShield AI dashboard provides:
 
--   Real‑time disaster signal monitoring
--   Risk zone visualization
--   Live emergency alerts
--   Rescue deployment coordination
--   Resource inventory tracking
--   Environmental signal trend charts
+• Real-time disaster signal monitoring\
+• Risk zone visualization\
+• Live emergency alerts\
+• Rescue deployment coordination\
+• Resource inventory tracking\
+• Environmental signal trend charts
 
 ------------------------------------------------------------------------
 
-## 🧰 Tech Stack
+# 🧰 Tech Stack
 
   Layer             Technology
   ----------------- ---------------------------------
-  Backend           Python, FastAPI, Uvicorn
-  Agent Framework   Fetch.ai uAgents Architecture
+  Backend           Python, FastAPI
+  AI Platform       ASI:One Intelligent AI Platform
+  Agent Framework   Fetch.ai uAgents
   Frontend          HTML5, CSS3, JavaScript
   Data              Simulated Environmental Sources
   API Docs          OpenAPI / Swagger
 
 ------------------------------------------------------------------------
 
-## 📂 Project Structure
+# 📂 Project Structure
 
-    crisis-shield-ai/
-    │
-    ├── backend/
-    │   ├── agents/
-    │   │   ├── signal_watch_agent.py
-    │   │   ├── risk_predict_agent.py
-    │   │   ├── citizen_alert_agent.py
-    │   │   ├── rescue_coordinator_agent.py
-    │   │   └── resource_supply_agent.py
-    │   │
-    │   ├── models/
-    │   ├── routes/
-    │   ├── services/
-    │   └── main.py
-    │
-    ├── frontend/
-    │   ├── css/
-    │   ├── js/
-    │   └── index.html
-    │
-    └── docs/
-        └── PROJECT_DOCUMENT.md
+crisis-shield-ai/
+
+backend/\
+agents/\
+signal_watch_agent.py\
+risk_predict_agent.py\
+citizen_alert_agent.py\
+rescue_coordinator_agent.py\
+resource_supply_agent.py
+
+frontend/\
+css/\
+js/\
+index.html
+
+docs/\
+PROJECT_DOCUMENT.md
 
 ------------------------------------------------------------------------
 
-## ⚡ Quick Start
+# ⚡ Quick Start
 
 ### 1️⃣ Install Dependencies
 
@@ -151,44 +167,44 @@ python main.py
 
 ### 3️⃣ Open the Dashboard
 
-    http://localhost:8000
+http://localhost:8000
 
 API documentation:
 
-    http://localhost:8000/docs
+http://localhost:8000/docs
 
 ------------------------------------------------------------------------
 
-## 🚀 Future Improvements
+# 🚀 Future Improvements
 
--   Integration with real satellite and weather data
--   Deployment using Fetch.ai Agentverse infrastructure
--   Mobile emergency alert application
--   Smart city infrastructure integration
--   Machine learning-based disaster prediction models
+• Integration with real satellite and weather data\
+• Deployment using Fetch.ai Agentverse infrastructure\
+• Mobile emergency alert application\
+• Smart city infrastructure integration\
+• Machine learning-based disaster prediction models
 
 ------------------------------------------------------------------------
 
-## 🌍 Impact
+# 🌍 Impact
 
 CrisisShield AI can support:
 
--   Governments
--   Disaster response agencies
--   Smart city platforms
--   Insurance risk analysis systems
+🏛 Government disaster management agencies\
+🚑 Emergency response teams\
+🏙 Smart city monitoring platforms\
+📊 Insurance risk analysis systems
 
 Early detection and coordinated response can dramatically reduce
 disaster damage and save lives.
 
 ------------------------------------------------------------------------
 
-## 📜 License
+# 📜 License
 
 MIT License
 
 ------------------------------------------------------------------------
 
-## ⭐ Final Note
+# ⭐ Final Note
 
 **CrisisShield AI --- Because every minute of warning saves lives.**
